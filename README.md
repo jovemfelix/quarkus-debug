@@ -8,6 +8,8 @@ This is a simple project to help anyone debug http requests. When using a proxy/
 
 ### Docker Image
 
+> get [quarkus-cli](https://quarkus.io/guides/cli-tooling)
+
 To build the image, run:
 
 ```bash
@@ -37,6 +39,22 @@ oc expose svc/debug --path=/debug -n debug
 ```bash
 quarkus dev
 ```
+
+
+
+## Send to Quay.io
+
+> https://quay.io/repository/rfelix/ubi8-quarkus-debug
+
+```shell
+$ docker tag renato/quarkus-debug:latest quay.io/rfelix/ubi8-quarkus-debug:1.0
+
+$ docker login quay.io
+
+$ docker push quay.io/rfelix/ubi8-quarkus-debug:1.0
+```
+
+
 
 ## Running
 
